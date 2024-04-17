@@ -49,7 +49,6 @@ def migrate_file(file_name: str) -> None:
 def organize_game_clips() -> None:
     notification.notify(title='Organize Game Clips',
                         message='Organizing...',
-                        app_icon=r'C:\Users\jrhol\Automated-Tasks\organize_game_clips\a834d39f-1ab5-4d7d-ac2d-85192e54844d.ico',
                         app_name='Organize Game Clips',
                         timeout=3)
     
