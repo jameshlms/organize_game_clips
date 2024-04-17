@@ -3,7 +3,7 @@ from typing import Final, Generator
 from plyer import notification
 from os import path
 
-from config import XBOX_DVR_DIR, GAME_CLIPS_DIR
+from config import XBOX_DVR_DIR, GAME_CLIPS_DIR, SPECIFIC_GAME_CLIPS_DIR
 
 
 def get_game_dir(file_name: str) -> str:
@@ -32,10 +32,17 @@ def migrate_file(file_name: str) -> None:
     """
     Migrates the file from the source path to the destination path.
     """
+    if file_name in SPECIFIC_GAME_CLIPS_DIR:
+        dest_path: Path = Path(SPECIFIC_GAME_CLIPS_DIR[file_name])
+        if not dest_path.exists():
+            dest_path.mkdir(parents=True, exist_ok=True)
+        dest_path = Path(f'{SPECIFIC_GAME_CLIPS_DIR[file_name]}\\{file_name}')
+    else:
+        dest_path: Path = determine_dest_path(file_name)
+        if not dest_path.exists():
+            dest_path.parent.mkdir(parents=True, exist_ok=True)
+
     source_path: Path = determine_source_path(file_name)
-    dest_path: Path = determine_dest_path(file_name)
-    if not dest_path.exists():
-        dest_path.parent.mkdir(parents=True, exist_ok=True)
 
     source_path.replace(dest_path)
     
