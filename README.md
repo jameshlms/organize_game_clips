@@ -35,4 +35,4 @@ This project is licensed under the [MIT License](LICENSE).
 ## Contact
 
 - Author: [James Holmes](https://github.com/jameshlms)
-- Report Issues: [Issue Tracker](https://github.com/jameshlms/organize_game_clips/issues)
+- Report Issues: [Issue Tracker](https://github.com/jameshlms/xbox-game-dvr-organizer/issues)
