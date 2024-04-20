@@ -10,14 +10,14 @@ Unfortunately it will only organize clips with the updated naming convention tha
 
 - Sorts game clips into respective folders on execution.
 - Notifies when it executes.
-- Cross-platform compatibility.
+- Tested on Windows, unsure about MacOS.
 
 ## Installation
 
 1. Clone the repository.
-2. Add a config.py file.
-3. Add two variables being XBOX_DVR_DIR and GAME_CLIPS_DIR and give the desired paths.
-4. Run the project.
+2. Store on device.
+3. In preferred CLI, run the setup.py file to added preferred paths.
+4. Run the project from main.py to organize files.
 
 ## Usage
 
@@ -34,5 +34,5 @@ This project is licensed under the [MIT License](LICENSE).
 
 ## Contact
 
-- Author: [James Holmes](https://github.com/your-username)
-- Report Issues: [Issue Tracker](https://github.com/your-username/project-name/issues)
+- Author: [James Holmes](https://github.com/jameshlms)
+- Report Issues: [Issue Tracker](https://github.com/jameshlms/organize_game_clips/issues)
