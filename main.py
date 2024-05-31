@@ -1,5 +1,6 @@
-from pathlib import Path
 from typing import Generator
+
+from pathlib import Path
 from plyer import notification
 
 from config import XBOX_DVR_DIR, GAME_CLIPS_DIR
