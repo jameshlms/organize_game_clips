@@ -1,7 +1,6 @@
 from typing import Generator
 
 from pathlib import Path
-from plyer import notification
 
 from config import XBOX_DVR_DIR, GAME_CLIPS_DIR
 
@@ -41,11 +40,6 @@ def migrate_file(file_name: str) -> None:
     source_path.replace(dest_path)
     
 def organize_game_clips() -> None:
-    notification.notify(title='Organize Game Clips',
-                        message='Organizing...',
-                        app_name='Organize Game Clips',
-                        timeout=3)
-    
     xbox_dvr_path: Path = Path(XBOX_DVR_DIR)
     entries: Generator[Path, None, None] = xbox_dvr_path.iterdir()
     
